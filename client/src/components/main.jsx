@@ -16,7 +16,7 @@ class Main extends React.Component {
   // }
 
   render () {
-    var test = this.props.details[8]
+    var test = this.props.details[1]
     return (
       console.log(this.props),
       <div>
@@ -25,13 +25,13 @@ class Main extends React.Component {
         <img className="avatar" src={test.pic}></img>
         <div> {test.city}</div>
         <div>Entire House
-          <div>{test.guest} guests {test.bedrooms} bedrooms {test.beds} beds {test.baths} baths</div>
+          <div>{test.guests} guests {test.bedrooms} bedrooms {test.beds} beds {test.baths} baths</div>
         </div>
         <div>{test.superHost ? <SuperHost info={test}/> : null}</div>
         <div>{test.rating > 89 ? <Rating info={test}/> : null}</div>
         <div>{test.selfCheckIn ? <SelfCheckIn info={test}/> : null}</div>
         <div>
-          <p>{test.body}</p>
+          <p>{test.description}</p>
         </div>
       </div>
     )

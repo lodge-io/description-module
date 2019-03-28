@@ -13,7 +13,7 @@ const fs = require('fs')
 // let city = faker.address.city();
 // let country = faker.address.country();
 
-// let guest = faker.random.number(9) + 1;
+// let guests = faker.random.number(9) + 1;
 // let beds = faker.random.number(4) + 1;
 // let bedrooms = faker.random.number(4) + 1;
 
@@ -24,7 +24,7 @@ const fs = require('fs')
 // let selfCheckIn = faker.random.boolean();
 // let rating = faker.random.number(4) + 1;
 
-// let body = faker.lorem.paragraphs(10);
+// let description = faker.lorem.paragraphs(10);
 
 // let license = faker.address.stateAbbr() + faker.random.number({min: 100000000000, max: 1000000000000});
 
@@ -37,14 +37,14 @@ const fs = require('fs')
 //   title : title,
 //   city : city,
 //   country : country,
-//   guest : guest,
+//   guests : guests,
 //   beds : beds,
 //   bedrooms : bedrooms,
 //   baths : baths,
 //   superHost : superHost,
 //   selfCheckIn : selfCheckIn,
 //   rating : rating,
-//   body : body,
+//   description : description,
 //   license : license,
 // }
 
@@ -63,7 +63,7 @@ function generateUsers() {
     let city = faker.address.city();
     let country = faker.address.country();
 
-    let guest = faker.random.number(9) + 1;
+    let guests = faker.random.number(9) + 1;
     let beds = faker.random.number(4) + 1;
     let bedrooms = faker.random.number(4) + 1;
 
@@ -74,7 +74,7 @@ function generateUsers() {
     let selfCheckIn = faker.random.boolean();
     let rating = faker.random.number({min: 85, max: 100});
 
-    let body = faker.lorem.paragraphs(10);
+    let description = faker.lorem.paragraphs(10);
 
     let license = faker.address.stateAbbr() + faker.random.number({min: 100000000000, max: 1000000000000});
 
@@ -85,14 +85,14 @@ function generateUsers() {
       'title' : title,
       'city' : city,
       'country' : country,
-      'guest' : guest,
+      'guests' : guests,
       'beds' : beds,
       'bedrooms' : bedrooms,
       'baths' : baths,
       'superHost' : superHost,
       'selfCheckIn' : selfCheckIn,
       'rating' : rating,
-      'body' : body,
+      'description' : description,
       'license' : license,
     });
   }
