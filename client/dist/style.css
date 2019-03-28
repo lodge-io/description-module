@@ -1,0 +1,10 @@
+body {
+  background-color: aquamarine;
+  width: 700px;
+  height: 700px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+}
