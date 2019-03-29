@@ -4,7 +4,7 @@ const app = express();
 const port = 3117;
 const bodyParser = require('body-parser');
 const path = require('path');
-const SingleOwner = require('../database/schema.js').SingleOwner;
+const SingleOwner = require('../database/schema.js').SingleOwner; 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
