@@ -67,7 +67,7 @@ function generateUsers() {
     let beds = faker.random.number(4) + 1;
     let bedrooms = faker.random.number(4) + 1;
 
-    var bathArray = [1, 1.5, 2, 2.5]
+    let bathArray = [1, 1.5, 2, 2.5]
     let baths = bathArray[Math.floor(Math.random() * 4)]; // array?
 
     let superHost = faker.random.boolean();
