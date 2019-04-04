@@ -1,9 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
 import Main from './main.jsx';
-// import SelfCheckIn from './selfcheckin.jsx';
-// import Rating from './rating.jsx';
-// import SuperHost from './superhost.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,13 +25,10 @@ class App extends React.Component {
   }
 
   render() {
+    const { host } = this.state;
     return (
       <div>
-        <div>The beginning of time~</div>
-        {this.state.host ? <Main details={this.state.host} /> : null}
-        {/* <div>
-          <Main details={this.state.host} />
-        </div> */}
+        {host ? <Main details={host} /> : null}
       </div>
     );
   }

@@ -1,8 +1,5 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
-// import Enzyme from 'enzyme';
-// import Adapter from 'enzyme-adapter-react-16';
-import $ from 'jquery';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import App from './client/src/components/app';
@@ -11,51 +8,25 @@ import SuperHost from './client/src/components/superhost';
 import Rating from './client/src/components/rating';
 import SelfCheckIn from './client/src/components/selfcheckin';
 
-// Enzyme.configure({ adapter: new Adapter() });
-
-// const {shallow} = require('enzyme');
-
-const generate = require('./fake/names');
 const fakedata = require('./data.js').fakedata;
 
-// test('Fake data structure is correct', () => {
-//   const data = generate()
-//   const structure = {
-//     firstName: expect.any(String),
-//     lastName: expect.any(String),
-//     pic: expect.any(String),
-//     title: expect.any(String),
-//     city: expect.any(String),
-//     country: expect.any(String),
-//     guests: expect.any(Number),
-//     beds: expect.any(Number),
-//     bedrooms: expect.any(Number),
-//     baths: expect.any(Number),
-//     superHost: expect.any(Boolean),
-//     selfCheckIn: expect.any(Boolean),
-//     rating: expect.any(Number),
-//     description: expect.any(String),
-//     license: expect.any(String),
-//   }
-//   expect(data[0]).toEqual((expect.objectContaining(structure)));
-// });
 const falseData = [{
-  'hostid': 1,
-  'firstName': 'Aria',
-  'lastName': 'Willow',
-  'pic': 'https://source.unsplash.com/random',
-  'title': 'Ut molestias ipsam eius tenetur enim',
-  'city': 'South Montana',
-  'country': 'Uganda',
-  'guests': 7,
-  'beds': 2,
-  'bedrooms': 2,
-  'baths': 1.5,
-  'superHost': false,
-  'selfCheckIn': false,
-  'rating': 85,
-  'description': 'Illo aliquid ea qui est exercitationem. Et quibusdam animi laudantium distinctio. Expedita et sequi. Consequuntur enim ullam dolore aut impedit labore. Minus quidem id nostrum omnis veniam iusto voluptates aut. Perspiciatis veritatis unde voluptatum officiis.\n \rSunt excepturi voluptatem sapiente. Corrupti vel quis eligendi error aut dolorum voluptatem. Nihil explicabo harum quia rem velit illum quia. Consequatur explicabo commodi ut cumque et ullam possimus et.\n \rQuisquam iusto culpa. Eum exercitationem distinctio neque quo quaerat. Nisi neque occaecati non debitis est quaerat adipisci est. Veniam sed nulla in et nihil nam qui. Necessitatibus voluptas harum.\n \rNon voluptatibus rerum iusto omnis quia possimus optio pariatur quia. Ut est atque. Eius porro accusamus officia tempore. Et sint maxime et recusandae libero natus. Recusandae voluptates in asperiores impedit officiis dolorem dolorem sed. Ipsam iste cum et officia.\n \rEst maxime modi qui voluptatem accusantium sed. Quia dolorem sint assumenda et aut ut. Mollitia maxime omnis optio. Et quo est enim.\n \rFugit aliquid id. Ut harum eveniet voluptatem incidunt vel architecto. Deserunt vel quasi expedita est quia sit quia reprehenderit.\n \rRepellendus consequuntur doloribus quod. Eius commodi vel sapiente et at officia veniam eius aut. Est beatae eum est iste harum. Aut qui officiis asperiores nobis ad quia sed est rerum.\n \rNobis cupiditate unde quo dignissimos maiores. Sed iure dicta pariatur dolores perferendis earum. Et vel perspiciatis qui omnis ut quam illum et. Voluptatem provident fugit non molestiae. Reiciendis consequatur reiciendis aut aut vel porro repellendus laboriosam.\n \rError tenetur illum atque. Quae et et neque aut. Tempora corporis odit sint ratione quam perferendis mollitia. Maxime velit deleniti accusamus nemo amet accusantium quos et accusamus.\n \rNecessitatibus non eos quod ut placeat. Iste culpa harum vel omnis occaecati ipsum ea voluptatem tempora. Quis aut ullam hic facere quos similique.',
-  'license': 'VT758875689283'
+  hostid: 1,
+  firstName: 'Aria',
+  lastName: 'Willow',
+  pic: 'https://source.unsplash.com/random',
+  title: 'Ut molestias ipsam eius tenetur enim',
+  city: 'South Montana',
+  country: 'Uganda',
+  guests: 7,
+  beds: 2,
+  bedrooms: 2,
+  baths: 1.5,
+  superHost: false,
+  selfCheckIn: false,
+  rating: 85,
+  description: 'Illo aliquid ea qui est exercitationem. Et quibusdam animi laudantium distinctio. Expedita et sequi. Consequuntur enim ullam dolore aut impedit labore. Minus quidem id nostrum omnis veniam iusto voluptates aut. Perspiciatis veritatis unde voluptatum officiis.\n \rSunt excepturi voluptatem sapiente. Corrupti vel quis eligendi error aut dolorum voluptatem. Nihil explicabo harum quia rem velit illum quia. Consequatur explicabo commodi ut cumque et ullam possimus et.\n \rQuisquam iusto culpa. Eum exercitationem distinctio neque quo quaerat. Nisi neque occaecati non debitis est quaerat adipisci est. Veniam sed nulla in et nihil nam qui. Necessitatibus voluptas harum.\n \rNon voluptatibus rerum iusto omnis quia possimus optio pariatur quia. Ut est atque. Eius porro accusamus officia tempore. Et sint maxime et recusandae libero natus. Recusandae voluptates in asperiores impedit officiis dolorem dolorem sed. Ipsam iste cum et officia.\n \rEst maxime modi qui voluptatem accusantium sed. Quia dolorem sint assumenda et aut ut. Mollitia maxime omnis optio. Et quo est enim.\n \rFugit aliquid id. Ut harum eveniet voluptatem incidunt vel architecto. Deserunt vel quasi expedita est quia sit quia reprehenderit.\n \rRepellendus consequuntur doloribus quod. Eius commodi vel sapiente et at officia veniam eius aut. Est beatae eum est iste harum. Aut qui officiis asperiores nobis ad quia sed est rerum.\n \rNobis cupiditate unde quo dignissimos maiores. Sed iure dicta pariatur dolores perferendis earum. Et vel perspiciatis qui omnis ut quam illum et. Voluptatem provident fugit non molestiae. Reiciendis consequatur reiciendis aut aut vel porro repellendus laboriosam.\n \rError tenetur illum atque. Quae et et neque aut. Tempora corporis odit sint ratione quam perferendis mollitia. Maxime velit deleniti accusamus nemo amet accusantium quos et accusamus.\n \rNecessitatibus non eos quod ut placeat. Iste culpa harum vel omnis occaecati ipsum ea voluptatem tempora. Quis aut ullam hic facere quos similique.',
+  license: 'VT758875689283',
 }];
 
 describe('<App />', () => {

@@ -12,7 +12,7 @@ class Main extends React.Component {
   }
 
   render () {
-    var test = this.props.details[0]
+    const test = this.props.details[0]
     return (
       <div>
         <div className="topleft">
@@ -48,10 +48,4 @@ class Main extends React.Component {
   }
 }
 
-// var Main = (props) => (
-//   console.log(props),
-//   <div>
-//     {props[0].title}
-//   </div>
-// )
 export default Main;
