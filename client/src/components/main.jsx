@@ -14,7 +14,6 @@ class Main extends React.Component {
   render () {
     var test = this.props.details[0]
     return (
-      console.log(this.props),
       <div>
         <div className="topleft">
           <div className="title">{test.title}</div>
@@ -25,12 +24,9 @@ class Main extends React.Component {
           <div className="host">{test.firstName} {test.lastName}</div>
         </div>
         <div className="housebox">
-          {/* <div className="iconbox">
-            <img className="houseicon" src="images/bus.png"></img>
-          </div> */}
           <div className="housetopic">
-            <div><b className="highlights"><p><i id="icons" class="fas fa-home"></i> Entire House</p></b>
-              <div className="house">
+            <div><b className="highlights"><p><i id="icons" className="fas fa-home"></i> Entire House</p></b>
+              <div className="housedescription">
                 <div className="housedetails">{test.guests} guests </div>
                 <div className="housedetails">{test.bedrooms} bedrooms </div>
                 <div className="housedetails">{test.beds} beds </div>

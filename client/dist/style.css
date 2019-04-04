@@ -62,7 +62,7 @@ body {
   margin-left: 10px;
 }
 
-.house {
+.housedescription {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
@@ -100,6 +100,8 @@ body {
 #selficon {
   margin-right: 1px;
 }
+
+
 
 /* .highlights {
   margin: 20px;
