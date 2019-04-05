@@ -89,19 +89,16 @@ describe('<App />', () => {
 
   it('should render the correct text if it is a great location', () => {
     const wrapper = shallow(<Rating info={fakedata[0]} />);
-    // expect(wrapper.find('.title')).to.have.lengthOf(1);
     expect(wrapper.text()).equal(` Great Location Experience ${fakedata[0].rating} of recent guests gave the check-in process a 5-star rating.`);
   });
 
   it('should render the correct text if it is a great location', () => {
     const wrapper = shallow(<SuperHost info={fakedata[0]} />);
-    // expect(wrapper.find('.title')).to.have.lengthOf(1);
     expect(wrapper.text()).equal(` ${fakedata[0].firstName} ${fakedata[0].lastName} is a Superhost Superhost are experienced, highly rated hosts who are committed to providing great stays for guests.`);
   });
 
   it('should render the correct text if it is a great location', () => {
     const wrapper = shallow(<SelfCheckIn info={fakedata[0]} />);
-    // expect(wrapper.find('.title')).to.have.lengthOf(1);
     expect(wrapper.text()).equal(' Self check-in Check yourself in with the keypad code.');
   });
 
@@ -119,20 +116,4 @@ describe('<App />', () => {
     const wrapper = shallow(<Main details={falseData} />);
     expect(wrapper.find(SuperHost)).to.have.lengthOf(0);
   });
-
-  // it('renders children when passed in', () => {
-  //   const wrapper = shallow((
-  //     <MyComponent>
-  //       <div className="unique" />
-  //     </MyComponent>
-  //   ));
-  //   expect(wrapper.contains(<div className="unique" />)).to.equal(true);
-  // });
-
-  // it('simulates click events', () => {
-  //   const onButtonClick = sinon.spy();
-  //   const wrapper = shallow(<Foo onButtonClick={onButtonClick} />);
-  //   wrapper.find('button').simulate('click');
-  //   expect(onButtonClick).to.have.property('callCount', 1);
-  // });
 });

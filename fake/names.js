@@ -51,7 +51,6 @@ function generateUsers() {
 }
 
 const dataObj = generateUsers();
-// console.log(dataObj)
 fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));
 
 module.exports = generateUsers;
