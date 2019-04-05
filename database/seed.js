@@ -1,11 +1,10 @@
-const db  = require('./index.js');
+const db = require('./index.js');
 const SingleOwner = require('./schema.js').SingleOwner;
 const fake = require('../data.js').fakedata;
 
-var data = fake;
-// console.log(data[0])
+const fakeHostData = fake;
 const insertSampleSingleOwners = function () {
-  SingleOwner.create(data)
+  SingleOwner.create(fakeHostData)
     .then(() => db.close());
 };
 

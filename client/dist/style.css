@@ -22,7 +22,6 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  /* float: right; */
   width: 10%;
   height: 120px;
   flex-wrap: wrap;
@@ -62,7 +61,7 @@ body {
   margin-left: 10px;
 }
 
-.house {
+.housedescription {
   display: flex;
   flex-direction: row;
   margin-left: 20px;
@@ -80,7 +79,6 @@ body {
 
 .housetopic {
   width: 90%;
-  /* float: right; */
 }
 
 .iconbox {
@@ -100,7 +98,3 @@ body {
 #selficon {
   margin-right: 1px;
 }
-
-/* .highlights {
-  margin: 20px;
-} */

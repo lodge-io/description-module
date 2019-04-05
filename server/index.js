@@ -1,10 +1,10 @@
 const express = require('express');
-
-const app = express();
-const port = 3117;
 const bodyParser = require('body-parser');
 const path = require('path');
 const SingleOwner = require('../database/schema.js').SingleOwner; 
+
+const app = express();
+const port = 3117;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -15,5 +15,7 @@ app.listen(port, () => {
 });
 
 app.get('/host', (req, res) => {
-  SingleOwner.find().then(data => res.send(data));
+  SingleOwner.find()
+    .then(hostData => res.send(hostData))
+    .catch((err) => { throw err; });
 });

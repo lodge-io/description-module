@@ -5,57 +5,49 @@ import SelfCheckIn from './selfcheckin.jsx';
 
 class Main extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-    }
+    };
   }
 
-  render () {
-    var test = this.props.details[0]
+  render() {
+    const { details } = this.props;
     return (
-      console.log(this.props),
       <div>
         <div className="topleft">
-          <div className="title">{test.title}</div>
-          <div className="city"> {test.city}</div>
+          <div className="title">{details[0].title}</div>
+          <div className="city">{details[0].city}</div>
         </div>
         <div className="topright">
-          <img className="avatar" src={test.pic}></img>
-          <div className="host">{test.firstName} {test.lastName}</div>
+          <img className="avatar" alt="hostavatar" src={details[0].pic}></img>
+          <div className="host">
+            {details[0].firstName} {details[0].lastName}
+          </div>
         </div>
         <div className="housebox">
-          {/* <div className="iconbox">
-            <img className="houseicon" src="images/bus.png"></img>
-          </div> */}
           <div className="housetopic">
-            <div><b className="highlights"><p><i id="icons" class="fas fa-home"></i> Entire House</p></b>
-              <div className="house">
-                <div className="housedetails">{test.guests} guests </div>
-                <div className="housedetails">{test.bedrooms} bedrooms </div>
-                <div className="housedetails">{test.beds} beds </div>
-                <div className="housedetails">{test.baths} baths</div>
+            <div><b className="highlights"><p><i id="icons" className="fas fa-home"></i> Entire House</p></b>
+              <div className="housedescription">
+                <div className="housedetails">{details[0].guests} guests </div>
+                <div className="housedetails">{details[0].bedrooms} bedrooms </div>
+                <div className="housedetails">{details[0].beds} beds </div>
+                <div className="housedetails">{details[0].baths} baths</div>
               </div>
             </div>
           </div>
-          <div>{test.superHost ? <SuperHost info={test}/> : null}</div>
-          <div>{test.rating > 89 ? <Rating info={test}/> : null}</div>
-          <div>{test.selfCheckIn ? <SelfCheckIn info={test}/> : null}</div>
+          <div>{details[0].superHost ? <SuperHost info={details[0]} /> : null}</div>
+          <div>{details[0].rating > 89 ? <Rating info={details[0]} /> : null}</div>
+          <div>{details[0].selfCheckIn ? <SelfCheckIn info={details[0]} /> : null}</div>
         </div>
         <div>
-          <p>{test.description}</p>
+          <p>{details[0].description}</p>
         </div>
         <div>License #</div>
-        <div>{test.license}</div>
+        <div>{details[0].license}</div>
       </div>
-    )
+    );
   }
 }
 
-// var Main = (props) => (
-//   console.log(props),
-//   <div>
-//     {props[0].title}
-//   </div>
-// )
 export default Main;
