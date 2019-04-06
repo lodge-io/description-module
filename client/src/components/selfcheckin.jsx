@@ -1,11 +1,37 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
+const fontColor = '#484848';
+
+const HouseTopic = styled.p`
+  font-weight: 600;
+  font-size: 16px;
+  font-family: ${fontStyle};
+  color: ${fontColor};
+  margin-bottom: 5px;
+`;
+
+const HouseDetails = styled.div`
+  margin-left: 2%;
+  font-style: ${fontStyle};
+  color: ${fontColor};
+`;
+
+const Icon = styled.i`
+  margin-right: 12px;
+  // padding-bottom: 16px;
+`;
 
 const SelfCheckIn = () => (
   <div>
-    <b className="highlights"><p><i id="selficon" className="fas fa-key"></i> Self check-in </p></b>
-    <div className="housedescription">
+    <HouseTopic>
+      <Icon className="fas fa-key" />
+      Self check-in
+    </HouseTopic>
+    <HouseDetails>
       Check yourself in with the keypad code.
-    </div>
+    </HouseDetails>
   </div>
 );
 
