@@ -28,7 +28,9 @@ const SuperHost = ({info}) => (
       <Icon className="fas fa-award" />
       {info.firstName} {info.lastName} is a Superhost
     </HouseTopic>
-    <HouseDetails className="housedescription">Superhost are experienced, highly rated hosts who are committed to providing great stays for guests.</HouseDetails>
+    <HouseDetails>
+      Superhost are experienced, highly rated hosts who are committed to providing great stays for guests.
+    </HouseDetails>
   </div>
 );
 

@@ -132,7 +132,7 @@ class Main extends React.Component {
     const { showAll } = this.state;
     const text = details[0].description.split(' ');
     const limit = 75;
-    const toShow = text.slice(0, limit).join(' ');
+    const toShow = text.slice(0, limit).join(' ') + '...';
     if (text.length < limit) {
       this.setState({ showAll: false });
     }
