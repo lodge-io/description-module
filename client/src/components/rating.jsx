@@ -1,11 +1,37 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
+const fontColor = '#484848';
+
+const HouseTopic = styled.p`
+  font-weight: 600;
+  font-size: 16px;
+  font-family: ${fontStyle};
+  color: ${fontColor};
+  margin-bottom: 5px;
+`;
+
+const HouseDetails = styled.div`
+  margin-left: 2%;
+  font-style: ${fontStyle};
+  color: ${fontColor};
+`;
+
+const Icon = styled.i`
+  margin-right: 10px;
+  // padding-bottom: 16px;
+`;
 
 const Rating = ({ info }) => (
   <div>
-    <b className="highlights"><p><i className="fas fa-star"></i> Great Location Experience </p></b>
-    <div className="housedescription">
-      {info.rating} of recent guests gave the check-in process a 5-star rating.
-    </div>
+    <HouseTopic>
+      <Icon className="fas fa-star" />
+      Great Location Experience
+    </HouseTopic>
+    <HouseDetails>
+      { info.rating } of recent guests gave the check-in process a 5-star rating.
+    </HouseDetails>
   </div>
 );
 
