@@ -19,3 +19,9 @@ app.get('/host', (req, res) => {
     .then(hostData => res.send(hostData))
     .catch((err) => { throw err; });
 });
+
+app.get('/host/:hostid', (req, res) => {
+  SingleOwner.find({ hostid: req.params.hostid })
+    .then(hostData => res.send(hostData))
+    .catch((err) => { throw err; });
+});

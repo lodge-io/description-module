@@ -130,7 +130,7 @@ class Main extends React.Component {
   render() {
     const { details } = this.props;
     const { showAll } = this.state;
-    const text = details[0].description.split(' ');
+    const text = details.description.split(' ');
     const limit = 75;
     const toShow = text.slice(0, limit).join(' ') + '...';
     if (text.length < limit) {
@@ -139,13 +139,13 @@ class Main extends React.Component {
     return (
       <div>
         <TopLeft>
-          <Title>{details[0].title}</Title>
-          <City>{details[0].city}</City>
+          <Title>{details.title}</Title>
+          <City>{details.city}</City>
         </TopLeft>
         <TopRight>
-          <Avatar src={details[0].pic} />
+          <Avatar src={details.pic} />
           <Host>
-            {details[0].firstName} {details[0].lastName}
+            {details.firstName} {details.lastName}
           </Host>
         </TopRight>
         <HouseBox>
@@ -154,24 +154,24 @@ class Main extends React.Component {
             Entire House
           </HouseTopic>
           <HouseDescription>
-            <HouseDetails>{details[0].guests} guests </HouseDetails>
-            <HouseDetails>{details[0].bedrooms} bedrooms </HouseDetails>
-            <HouseDetails>{details[0].beds} beds </HouseDetails>
-            <HouseDetails>{details[0].baths} baths </HouseDetails>
+            <HouseDetails>{details.guests} guests </HouseDetails>
+            <HouseDetails>{details.bedrooms} bedrooms </HouseDetails>
+            <HouseDetails>{details.beds} beds </HouseDetails>
+            <HouseDetails>{details.baths} baths </HouseDetails>
           </HouseDescription>
-          <div>{details[0].superHost ? <SuperHost info={details[0]} /> : null}</div>
-          <div>{details[0].rating > 89 ? <Rating info={details[0]} /> : null}</div>
-          <div>{details[0].selfCheckIn ? <SelfCheckIn info={details[0]} /> : null}</div>
+          <div>{details.superHost ? <SuperHost info={details} /> : null}</div>
+          <div>{details.rating > 89 ? <Rating info={details} /> : null}</div>
+          <div>{details.selfCheckIn ? <SelfCheckIn info={details} /> : null}</div>
         </HouseBox>
         <div>
           {showAll
             ? <Text> { toShow } <br /><br /> <Read onClick={this.showMore}>Read More</Read> </Text>
-            : <Text> {details[0].description} {showAll ? null : <Read onClick={this.showLess}><br/><br/>Hide</Read>} </Text>}
+            : <Text> {details.description} {showAll ? null : <Read onClick={this.showLess}><br/><br/>Hide</Read>} </Text>}
         </div>
         <Text>
           License #
           <br />
-          {details[0].license}
+          {details.license}
         </Text>
         <Contact>
           Contact Host

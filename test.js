@@ -43,17 +43,17 @@ describe('<App />', () => {
   });
 
   it('renders <Rating /> correctly', () => {
-    const wrapper = shallow(<Main details={fakedata} />);
+    const wrapper = shallow(<Main details={fakedata[0]} />);
     expect(wrapper.find(Rating)).to.have.lengthOf(1);
   });
 
   it('renders <SuperHost /> correctly', () => {
-    const wrapper = shallow(<Main details={fakedata} />);
+    const wrapper = shallow(<Main details={fakedata[0]} />);
     expect(wrapper.find(SuperHost)).to.have.lengthOf(1);
   });
 
   it('renders <SelfCheckIn /> correctly', () => {
-    const wrapper = shallow(<Main details={fakedata} />);
+    const wrapper = shallow(<Main details={fakedata[0]} />);
     expect(wrapper.find(SelfCheckIn)).to.have.lengthOf(1);
   });
 
@@ -103,17 +103,17 @@ describe('<App />', () => {
   });
 
   it('should NOT render <SelfCheckIn /> if selfcheckin is false', () => {
-    const wrapper = shallow(<Main details={falseData} />);
+    const wrapper = shallow(<Main details={falseData[0]} />);
     expect(wrapper.find(SelfCheckIn)).to.have.lengthOf(0);
   });
 
   it('should NOT render <Rating /> if rating is below 90', () => {
-    const wrapper = shallow(<Main details={falseData} />);
+    const wrapper = shallow(<Main details={falseData[0]} />);
     expect(wrapper.find(Rating)).to.have.lengthOf(0);
   });
 
   it('should NOT render <SuperHost /> if superhost is false', () => {
-    const wrapper = shallow(<Main details={falseData} />);
+    const wrapper = shallow(<Main details={falseData[0]} />);
     expect(wrapper.find(SuperHost)).to.have.lengthOf(0);
   });
 
@@ -122,6 +122,6 @@ describe('<App />', () => {
     expect(wrapper.state('showAll')).to.equal(true);
     wrapper.find('button').simulate('click');
     expect(wrapper.state('showAll')).to.equal(false);
-    // expect(wrapper.text()).to.equal();
-  }); 
+    expect(wrapper.text()).to.equal();
+  });
 });
