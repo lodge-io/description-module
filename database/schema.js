@@ -7,6 +7,7 @@ db.on('error', console.log.bind(console, 'connection error'));
 db.once('open', () => (console.log('We\'re UP!')));
 
 const singleSchema = new mongoose.Schema({
+  hostid: Number,
   firstName: String,
   lastName: String,
   pic: String,

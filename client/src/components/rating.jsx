@@ -13,8 +13,9 @@ const HouseTopic = styled.p`
 `;
 
 const HouseDetails = styled.div`
+  font-weight: 400;
   margin-left: 2%;
-  font-style: ${fontStyle};
+  font-style: ${fontStyle}
   color: ${fontColor};
 `;
 

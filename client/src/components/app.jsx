@@ -8,6 +8,7 @@ class App extends React.Component {
 
     this.state = {
       host: null,
+      hostid: `${window.location.pathname}`,
     };
   }
 
@@ -16,10 +17,12 @@ class App extends React.Component {
   }
 
   load() {
+    const { id } = this.props;
+    const { hostid } = this.state;
     $.ajax({
       method: 'GET',
-      url: '/host',
-      success: data => (this.setState({ host: data })),
+      url: `/api${hostid}`,
+      success: data => (this.setState({ host: data[0] })),
       error: () => (console.log('Didnt Mount')),
     });
   }
