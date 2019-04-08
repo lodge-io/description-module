@@ -163,12 +163,15 @@ class Main extends React.Component {
         <div>
           {showAll
             ? <Text>
-                { toShow } <br /><br /> 
+                { toShow } <br /><br />
                 <Read onClick={this.showMore}>
                   Read More
                 </Read> 
               </Text>
-            : <Text> {details.description} <br/><br/>License #<br /> {details.license}
+            : <Text> {details.description} <br/><br/>License #<br /> {details.license} <br/><br/> 
+                <Contact>
+                  Learn about this number
+                </Contact>
                 {showAll 
                 ? null 
                 : <Read onClick={this.showLess}><br/><br/>Hide</Read>} 
