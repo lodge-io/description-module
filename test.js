@@ -8,7 +8,7 @@ import SuperHost from './client/src/components/superhost';
 import Rating from './client/src/components/rating';
 import SelfCheckIn from './client/src/components/selfcheckin';
 
-const fakedata = require('./data.js').fakedata;
+const { fakedata } = require('./data.js');
 
 const falseData = [{
   hostid: 1,

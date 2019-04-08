@@ -25,8 +25,6 @@ const TopRight = styled.div`
   margin: 0;
   width: 10%;
   height: 120px;
-  // flex-wrap: wrap;
-  // text-align: center;
 `;
 
 const Title = styled.div`
@@ -83,15 +81,14 @@ const HouseDetails = styled.div`
 `;
 
 const Text = styled.p`
-font-weight: 400;
-font-size: 16px;
-font-style: ${fontStyle};
-color: ${fontColor};
+  font-weight: 400;
+  font-size: 16px;
+  font-style: ${fontStyle};
+  color: ${fontColor};
 `;
 
 const Icon = styled.i`
   margin-right: 10px;
-  // padding-bottom: 16px;
 `;
 
 const Read = styled.span`
@@ -132,7 +129,7 @@ class Main extends React.Component {
     const { showAll } = this.state;
     const text = details.description.split(' ');
     const limit = 75;
-    const toShow = text.slice(0, limit).join(' ') + '...';
+    const toShow = `${text.slice(0, limit).join(' ')}...`;
     if (text.length < limit) {
       this.setState({ showAll: false });
     }
@@ -165,14 +162,18 @@ class Main extends React.Component {
         </HouseBox>
         <div>
           {showAll
-            ? <Text> { toShow } <br /><br /> <Read onClick={this.showMore}>Read More</Read> </Text>
-            : <Text> {details.description} {showAll ? null : <Read onClick={this.showLess}><br/><br/>Hide</Read>} </Text>}
+            ? <Text>
+                { toShow } <br /><br /> 
+                <Read onClick={this.showMore}>
+                  Read More
+                </Read> 
+              </Text>
+            : <Text> {details.description} <br/><br/>License #<br /> {details.license}
+                {showAll 
+                ? null 
+                : <Read onClick={this.showLess}><br/><br/>Hide</Read>} 
+              </Text>}
         </div>
-        <Text>
-          License #
-          <br />
-          {details.license}
-        </Text>
         <Contact>
           Contact Host
         </Contact>
