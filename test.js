@@ -133,11 +133,9 @@ describe('<App />', () => {
 
   it('Main has a state of true after clicking Read More', () => {
     const wrapper = shallow(<Main details={fakedata[0]} />);
-    // expect(wrapper.find(TopLeft)).to.have.lengthOf(1);
     expect(wrapper.state('showAll')).to.equal(true);
     wrapper.find(Read).simulate('click');
     expect(wrapper.state('showAll')).to.equal(false);
-    // expect(wrapper.text()).to.equal();
   });
 
   it('Main has TopLeft styled component', () => {
@@ -155,12 +153,12 @@ describe('<App />', () => {
     expect(wrapper.find(City).children().text()).equal(`${mock.city}`);
   });
 
-  xit('Host text in Main component is correct', () => {
+  it('Host text in Main component is correct', () => {
     const wrapper = shallow(<Main details={mock} />);
-    expect(wrapper.find(Host).at(0).children(1).text()).equal(`${mock.firstName} ${mock.lastName}`);
+    expect(wrapper.find(Host).children().text()).equal(`${mock.firstName} ${mock.lastName}`);
   });
 
-  xit('HouseDetails text in Main component is correct', () => {
+  it('HouseDetails text in Main component is correct', () => {
     const wrapper = shallow(<Main details={mock} />);
     expect(wrapper.find(HouseDetails).children().text()).equal(`${mock.title}`);
   });

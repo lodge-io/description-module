@@ -142,8 +142,7 @@ class Main extends React.Component {
         <TopRight>
           <Avatar src={details.pic} />
           <Host>
-            {details.firstName}
-            {details.lastName}
+            {`${details.firstName} ${details.lastName}`}
           </Host>
         </TopRight>
         <HouseBox>
@@ -152,7 +151,9 @@ class Main extends React.Component {
             Entire House
           </HouseTopic>
           <HouseDescription>
-            <HouseDetails>{details.guests} guests </HouseDetails>
+            <HouseDetails>
+              {`${details.guests} guests`}
+            </HouseDetails>
             <HouseDetails>{details.bedrooms} bedrooms </HouseDetails>
             <HouseDetails>{details.beds} beds </HouseDetails>
             <HouseDetails>{details.baths} baths </HouseDetails>
