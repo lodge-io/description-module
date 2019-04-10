@@ -3,3 +3,5 @@ public/app.js
 node_modules/
 
 client/dist/style.css
+
+coverage/
