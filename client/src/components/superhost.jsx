@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
 const fontColor = '#484848';
@@ -14,7 +14,7 @@ const HouseTopic = styled.p`
 
 const HouseDetails = styled.div`
   margin-left: 2%;
-  font-style: ${fontStyle};
+  font-family: ${fontStyle};
   color: ${fontColor};
 `;
 
@@ -26,7 +26,7 @@ const SuperHost = ({info}) => (
   <div>
     <HouseTopic>
       <Icon className="fas fa-award" />
-      {info.firstName} {info.lastName} is a Superhost
+      {`${info.firstName} ${info.lastName} is a Superhost`}
     </HouseTopic>
     <HouseDetails>
       Superhost are experienced, highly rated hosts who are committed to providing great stays for guests.

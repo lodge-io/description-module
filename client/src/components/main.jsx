@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import SuperHost from './superhost.jsx';
 import Rating from './rating.jsx';
 import SelfCheckIn from './selfcheckin.jsx';
@@ -151,12 +151,10 @@ class Main extends React.Component {
             Entire House
           </HouseTopic>
           <HouseDescription>
-            <HouseDetails>
-              {`${details.guests} guests`}
-            </HouseDetails>
-            <HouseDetails>{details.bedrooms} bedrooms </HouseDetails>
-            <HouseDetails>{details.beds} beds </HouseDetails>
-            <HouseDetails>{details.baths} baths </HouseDetails>
+            <HouseDetails>{`${details.guests} guests`}</HouseDetails>
+            <HouseDetails>{`${details.bedrooms} bedrooms`}</HouseDetails>
+            <HouseDetails>{`${details.beds} beds`}</HouseDetails>
+            <HouseDetails>{`${details.baths} baths`}</HouseDetails>
           </HouseDescription>
           <div>{details.superHost ? <SuperHost info={details} /> : null}</div>
           <div>{details.rating > 89 ? <Rating info={details} /> : null}</div>

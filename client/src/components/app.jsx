@@ -22,7 +22,7 @@ class App extends React.Component {
     $.ajax({
       method: 'GET',
       // url: `/api${hostid}`,
-      url: `http://localhost:3116/api/host/1`,
+      url: 'http://localhost:3116/api/host/1',
       success: data => (this.setState({ host: data[0] })),
       error: () => (console.log('Didnt Mount')),
     });

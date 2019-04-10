@@ -13,7 +13,7 @@ app.use('/host/:hostid', express.static(path.join(__dirname, '../client/dist')))
 app.use(cors());
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port} WORKS`);
+  console.log(`http://localhost:${port} ~ Description-Module`);
 });
 
 app.get('/api/host/:hostid', (req, res) => {

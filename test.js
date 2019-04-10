@@ -158,8 +158,23 @@ describe('<App />', () => {
     expect(wrapper.find(Host).children().text()).equal(`${mock.firstName} ${mock.lastName}`);
   });
 
-  it('HouseDetails text in Main component is correct', () => {
+  it('HouseDetails guests text in Main component is correct', () => {
     const wrapper = shallow(<Main details={mock} />);
-    expect(wrapper.find(HouseDetails).children().text()).equal(`${mock.title}`);
+    expect(wrapper.find(HouseDetails).at(0).children().text()).equal(`${mock.guests} guests`);
+  });
+
+  it('HouseDetails bedrooms text in Main component is correct', () => {
+    const wrapper = shallow(<Main details={mock} />);
+    expect(wrapper.find(HouseDetails).at(1).children().text()).equal(`${mock.bedrooms} bedrooms`);
+  });
+
+  it('HouseDetails beds text in Main component is correct', () => {
+    const wrapper = shallow(<Main details={mock} />);
+    expect(wrapper.find(HouseDetails).at(2).children().text()).equal(`${mock.beds} beds`);
+  });
+
+  it('HouseDetails baths text in Main component is correct', () => {
+    const wrapper = shallow(<Main details={mock} />);
+    expect(wrapper.find(HouseDetails).at(3).children().text()).equal(`${mock.baths} baths`);
   });
 });

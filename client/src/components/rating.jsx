@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
 const fontColor = '#484848';
@@ -31,7 +31,7 @@ const Rating = ({ info }) => (
       Great Location Experience
     </HouseTopic>
     <HouseDetails>
-      { info.rating } of recent guests gave the check-in process a 5-star rating.
+      {`${info.rating} of recent guests gave the check-in process a 5-star rating.`}
     </HouseDetails>
   </div>
 );
