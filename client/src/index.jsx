@@ -3,4 +3,4 @@
 import App from './components/app.jsx';
 
 // ReactDOM.render(<App id="1" />, document.getElementById('description-module'));
-window.App = App;
+window.Description = App;
