@@ -1,17 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const SingleOwner = require('../database/schema.js').SingleOwner; 
+const cors = require('cors');
+const { SingleOwner } = require('../database/schema.js');
 
 const app = express();
-const port = 3117;
+const port = 3116;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/host/:hostid', express.static(path.join(__dirname, '../client/dist')));
+app.use(cors());
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port} WORKS`);
+  console.log(`http://localhost:${port} ~ Description-Module`);
 });
 
 app.get('/api/host/:hostid', (req, res) => {
