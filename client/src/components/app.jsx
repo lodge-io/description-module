@@ -17,12 +17,11 @@ class App extends React.Component {
   }
 
   load() {
-    const { id } = this.props;
     const { hostid } = this.state;
+    const id = hostid.split('/');
     $.ajax({
       method: 'GET',
-      // url: `/api${hostid}`,
-      url: 'http://localhost:3116/api/host/1',
+      url: `/api/host/${id[2]}`,
       success: data => (this.setState({ host: data[0] })),
       error: () => (console.log('Didnt Mount')),
     });
