@@ -1,11 +1,15 @@
 import React from 'react';
-// import styled from 'styled-components';
 import SuperHost from './superhost.jsx';
 import Rating from './rating.jsx';
 import SelfCheckIn from './selfcheckin.jsx';
 
+const { styled } = window;
 const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
 const fontColor = '#484848';
+
+const TopHalf = styled.div`
+  height: auto;
+`;
 
 const TopLeft = styled.div`
   display: flex;
@@ -135,16 +139,18 @@ class Main extends React.Component {
     }
     return (
       <div>
-        <TopLeft>
-          <Title>{details.title}</Title>
-          <City>{details.city}</City>
-        </TopLeft>
-        <TopRight>
-          <Avatar src={details.pic} />
-          <Host>
-            {`${details.firstName} ${details.lastName}`}
-          </Host>
-        </TopRight>
+        <TopHalf>
+          <TopLeft>
+            <Title>{details.title}</Title>
+            <City>{details.city}</City>
+          </TopLeft>
+          <TopRight>
+            <Avatar src={details.pic} />
+            <Host>
+              {`${details.firstName} ${details.lastName}`}
+            </Host>
+          </TopRight>
+        </TopHalf>
         <HouseBox>
           <HouseTopic>
             <Icon id="icons" className="fas fa-home" />
@@ -162,20 +168,41 @@ class Main extends React.Component {
         </HouseBox>
         <div>
           {showAll
-            ? <Text>
-                { toShow } <br /><br />
+            ? (
+              <Text>
+                { toShow }
+                <br />
+                <br />
                 <Read onClick={this.showMore}>
                   Read More
-                </Read> 
+                </Read>
               </Text>
-            : <Text> {details.description} <br/><br/>License #<br /> {details.license} <br/><br/> 
+            )
+            : (
+              <Text>
+                {details.description}
+                <br />
+                <br />
+                License #
+                <br />
+                {details.license}
+                <br />
+                <br />
                 <Contact>
                   Learn about this number
                 </Contact>
-                {showAll 
-                ? null 
-                : <Read onClick={this.showLess}><br/><br/>Hide</Read>} 
-              </Text>}
+                {showAll
+                  ? null
+                  : (
+                    <Read onClick={this.showLess}>
+                      <br />
+                      <br />
+                      Hide
+                    </Read>
+                  )
+                }
+              </Text>
+            )}
         </div>
         <Contact>
           Contact Host

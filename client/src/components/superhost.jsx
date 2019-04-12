@@ -1,6 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
 
+const { styled } = window;
 const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
 const fontColor = '#484848';
 
@@ -22,7 +22,7 @@ const Icon = styled.i`
   margin-right: 16px;
 `;
 
-const SuperHost = ({info}) => (
+const SuperHost = ({ info }) => (
   <div>
     <HouseTopic>
       <Icon className="fas fa-award" />
