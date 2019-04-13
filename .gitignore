@@ -12,7 +12,7 @@ coverage/
 
 fake/
 
-.circleci
+.circleci/
 
 data.json
 

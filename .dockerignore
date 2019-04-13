@@ -5,3 +5,4 @@ node_modules/
 coverage/
 fake/
 data.json
+description-module.pem

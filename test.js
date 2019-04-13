@@ -1,8 +1,7 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
 import { expect } from 'chai';
-import styled from 'styled-components';
 import App from './client/src/components/app';
 import Main, {
   TopLeft,
