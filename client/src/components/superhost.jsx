@@ -35,3 +35,8 @@ const SuperHost = ({ info }) => (
 );
 
 export default SuperHost;
+export {
+  HouseTopic,
+  Icon,
+  HouseDetails,
+};

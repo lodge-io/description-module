@@ -1,3 +1,4 @@
+description-module.pem
 node_modules/
 .gitignore
 .git
@@ -5,4 +6,3 @@ node_modules/
 coverage/
 fake/
 data.json
-description-module.pem
