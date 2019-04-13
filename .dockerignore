@@ -6,3 +6,7 @@ node_modules/
 coverage/
 fake/
 data.json
+test.js
+npm-debug.log
+jest.config.js
+enzyme.config.js
