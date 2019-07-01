@@ -1,7 +1,23 @@
+
+# IMPORTANT 
+description-module.pem
+
+# -------------------------------
+
 public/app.js
 
 node_modules/
 
-client/dist/style.css
-
 coverage/
+
+fake/
+
+.circleci/
+
+data.json
+
+oldData.js
+
+npm-debug.log
+
+.DS_Store

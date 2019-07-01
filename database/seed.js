@@ -1,5 +1,5 @@
 const db = require('./index.js');
-const SingleOwner = require('./schema.js').SingleOwner;
+const { SingleOwner } = require('./schema.js');
 const fake = require('../data.js').fakedata;
 
 const fakeHostData = fake;

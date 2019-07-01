@@ -1,6 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
 
+const { styled } = window;
 const fontStyle = 'Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif';
 const fontColor = '#484848';
 
@@ -13,7 +13,7 @@ const HouseTopic = styled.p`
 `;
 
 const HouseDetails = styled.div`
-  margin-left: 2%;
+  margin-left: 29px;
   font-family: ${fontStyle};
   color: ${fontColor};
 `;
