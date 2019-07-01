@@ -10,6 +10,7 @@ The description-module is a component that allows a homeowner to showcase their 
 * [Express/Node](https://expressjs.com/) - Used for easy routing
 * [MongoDB](https://www.mongodb.com/) - Efficent database seed with a hundred mock data to mimic homes.
 * [Docker](https://www.docker.com/) - Easy containering to allow for fast deployment.
+* [Styled-Components](https://www.styled-components.com/) - Used to modularize CSS for maintainability.
 
 ### Example when used with other microservices to produce a single listing.
 ![](GIF/Listing-Example.png)
