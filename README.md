@@ -1,4 +1,4 @@
-# Description-module
+# Description Module
 
 The description-module is a component that allows a homeowner to showcase their home's amenities and great attractions around, but also allows potential guest to have a general view and expectation of their host and lodging.
 
