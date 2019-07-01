@@ -75,7 +75,7 @@ const HouseTopic = styled.p`
 const HouseDescription = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: 2%;
+  margin-left: 29px;
 `;
 
 const HouseDetails = styled.div`
@@ -99,6 +99,7 @@ const Read = styled.span`
   color: teal;
   :hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 `;
 
@@ -106,6 +107,7 @@ const Contact = styled.span`
   color: teal;
   :hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 `;
 

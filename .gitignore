@@ -16,6 +16,8 @@ fake/
 
 data.json
 
+oldData.js
+
 npm-debug.log
 
 .DS_Store

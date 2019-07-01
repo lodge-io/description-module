@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "start-dev": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
+    "build": "webpack -p",
+    "db:setup": "node database/seed.js",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>test.js"
@@ -42,15 +51,6 @@
     "jest": "^24.5.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
-  },
-  "scripts": {
-    "start": "node server/index.js",
-    "start-dev": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch",
-    "build": "webpack -p",
-    "db:setup": "node database/seed.js",
-    "test": "jest",
-    "test-coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC"

@@ -13,7 +13,7 @@ const HouseTopic = styled.p`
 `;
 
 const HouseDetails = styled.div`
-  margin-left: 2%;
+  margin-left: 29px;
   font-family: ${fontStyle};
   color: ${fontColor};
 `;
